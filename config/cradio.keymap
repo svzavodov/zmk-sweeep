@@ -7,7 +7,7 @@
     #define BASE 0
     #define NUMBERS 1
     #define SYMBOL 2
-	#define FUNCTION 3
+    #define FUNCTION 3
     #define DIRECTION 4
 
 // -----------------
@@ -16,66 +16,66 @@
     flavor = "tap-preferred";
     tapping_term_ms = <175>;
     quick_tap_ms = <0>;
-	retro-tap;
+    retro-tap;
 };
 
 / {
     keymap {
-				compatible = "zmk,keymap";
+                compatible = "zmk,keymap";
 
         // Base alpha layer
-				base_layer {
-						label = "Base";
-						bindings = <
-						&kp Q &kp X &kp G &kp M &kp K           &kp SEMICOLON &kp COMMA  &kp APOSTROPHE     &kp J   &kp Z
-						&mt LGUI N &mt LALT R &mt LCTRL S &mt LSHIFT T &kp W        	&kp DOT &mt RSHIFT A &mt RCTRL E &mt RALT I	&mt RGUI H
-						&kp P &kp L &kp C &kp D &kp V           &kp TAB  &kp U  &kp O &kp Y &kp B
-										&lt FUNCTION F &lt NUMBERS BSPC           &lt DIRECTION SPACE &lt SYMBOL ENTER
-						>;
-				};
+                base_layer {
+                        label = "Base";
+                        bindings = <
+                        &kp Q &kp X &kp G &kp M &kp K           &kp SEMICOLON &kp COMMA  &kp APOSTROPHE     &kp J   &kp Z
+                        &mt LGUI N &mt LALT R &mt LCTRL S &mt LSHIFT T &kp W            &kp DOT &mt RSHIFT A &mt RCTRL E &mt RALT I &mt RGUI H
+                        &kp P &kp L &kp C &kp D &kp V           &kp TAB  &kp U  &kp O &kp Y &kp B
+                                        &lt FUNCTION F &lt NUMBERS BSPC           &lt DIRECTION SPACE &lt SYMBOL ENTER
+                        >;
+                };
 
         // Numbers and math stuff
-				NUMBERS_layer {
-						label = "NUMBERS";
-						bindings = <
-						&trans &trans &trans &trans &trans		    &lsft EQUAL &kp N7 &kp N8 &kp N9 &lsft N8
-						&trans &trans &trans &trans &trans          &kp DOT     &kp N4 &kp N5 &kp N6 &kp N0
-						&trans &trans &trans &trans &trans         	&kp EQUAL   &kp N1 &kp N2 &kp N3 &kp SLASH
+                NUMBERS_layer {
+                        label = "NUMBERS";
+                        bindings = <
+                        &trans &trans &trans &trans &trans          &lsft EQUAL &kp N7 &kp N8 &kp N9 &lsft N8
+                        &trans &trans &trans &trans &trans          &kp DOT     &kp N4 &kp N5 &kp N6 &kp N0
+                        &trans &trans &trans &trans &trans          &kp EQUAL   &kp N1 &kp N2 &kp N3 &kp SLASH
                                         &trans  &trans       &kp C_PLAY &kp CAPS
-						>;
-				};
+                        >;
+                };
 
         // mostly just brackets
-		    sym_layer {
-						label = "Symbols";
-						bindings = <
-						&bt BT_CLR &bt BT_NXT &trans &trans &trans    			    &trans &trans &trans &trans &trans
-						&kp RBKT &kp LBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &lsft GRAVE 	&trans &trans &trans &trans &trans
-						&kp GREATER_THAN  &kp LESS_THAN &kp LPAR &kp RPAR  &kp GRAVE       &trans &trans &trans &trans &trans
-															&kp UNDERSCORE &kp BACKSLASH    &trans  &trans
-						>;
-				};
+            sym_layer {
+                        label = "Symbols";
+                        bindings = <
+                        &bt BT_CLR &bt BT_NXT &trans &trans &trans                  &trans &trans &trans &trans &trans
+                        &kp RBKT &kp LBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &lsft GRAVE     &trans &trans &trans &trans &trans
+                        &kp GREATER_THAN  &kp LESS_THAN &kp LPAR &kp RPAR  &kp GRAVE       &trans &trans &trans &trans &trans
+                                                            &kp UNDERSCORE &kp BACKSLASH    &trans  &trans
+                        >;
+                };
 
         // function keys and media controls
-				FUNCTION_layer {
-						label = "FUNCTION";
-						bindings = <
-						&trans &trans &trans &trans &trans		    &kp C_MUTE    &kp F7 &kp F8 &kp F9 &kp F12
-						&trans &trans &trans &trans &trans          &kp C_VOL_UP  &kp F4 &kp F5 &kp F6 &kp F11
-						&trans &trans &trans &trans &trans         	&kp C_VOL_DN  &kp F1 &kp F2 &kp F3 &kp F10
-                                        &trans  &trans       		&kp C_PREV &kp C_NEXT
-						>;
-				};
+                FUNCTION_layer {
+                        label = "FUNCTION";
+                        bindings = <
+                        &trans &trans &trans &trans &trans          &kp C_MUTE    &kp F7 &kp F8 &kp F9 &kp F12
+                        &trans &trans &trans &trans &trans          &kp C_VOL_UP  &kp F4 &kp F5 &kp F6 &kp F11
+                        &trans &trans &trans &trans &trans          &kp C_VOL_DN  &kp F1 &kp F2 &kp F3 &kp F10
+                                        &trans  &trans              &kp C_PREV &kp C_NEXT
+                        >;
+                };
 
         // mouse and direction controls
-				DIRECTION_layer {
-						label = "DIRECTIONS";
-						bindings = <
-						&trans &trans &trans &trans &trans              	&trans &trans &trans &trans &trans
-						&kp LEFT &kp UP &kp DOWN &kp RIGHT &kp trans		&trans &trans &trans &trans &trans
-						&kp PAGE_UP &kp PAGE_DOWN &kp HOME &kp END &trans   &trans &trans &trans &trans &trans
-										&kp ESC &kp DELETE                  &trans &trans
-						>;
-				};
-		};
+                DIRECTION_layer {
+                        label = "DIRECTIONS";
+                        bindings = <
+                        &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans
+                        &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp trans        &trans &trans &trans &trans &trans
+                        &kp PAGE_UP &kp PAGE_DOWN &kp HOME &kp END &trans   &trans &trans &trans &trans &trans
+                                        &kp ESC &kp DELETE                  &trans &trans
+                        >;
+                };
+        };
 };
