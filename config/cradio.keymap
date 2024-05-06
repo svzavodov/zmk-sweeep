@@ -72,7 +72,7 @@
                         label = "DIRECTIONS";
                         bindings = <
                         &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans
-                        &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp trans        &trans &trans &trans &trans &trans
+                        &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans        &trans &trans &trans &trans &trans
                         &kp PAGE_UP &kp PAGE_DOWN &kp HOME &kp END &trans   &trans &trans &trans &trans &trans
                                         &kp ESC &kp DELETE                  &trans &trans
                         >;
