@@ -38,7 +38,7 @@
                 NUMBERS_layer {
                         label = "NUMBERS";
                         bindings = <
-                        &trans &trans &trans &trans &trans          &lsft EQUAL &kp N7 &kp N8 &kp N9 &lsft N8
+                        &trans &trans &trans &trans &trans          &kp LS(EQUAL) &kp N7 &kp N8 &kp N9 &kp LS(N8)
                         &trans &trans &trans &trans &trans          &kp DOT     &kp N4 &kp N5 &kp N6 &kp N0
                         &trans &trans &trans &trans &trans          &kp EQUAL   &kp N1 &kp N2 &kp N3 &kp SLASH
                                         &trans  &trans       &kp C_PLAY &kp CAPS
@@ -50,7 +50,7 @@
                         label = "Symbols";
                         bindings = <
                         &bt BT_CLR &bt BT_NXT &trans &trans &trans                  &trans &trans &trans &trans &trans
-                        &kp RBKT &kp LBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &lsft GRAVE     &trans &trans &trans &trans &trans
+                        &kp RBKT &kp LBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(GRAVE)     &trans &trans &trans &trans &trans
                         &kp GREATER_THAN  &kp LESS_THAN &kp LPAR &kp RPAR  &kp GRAVE       &trans &trans &trans &trans &trans
                                                             &kp UNDERSCORE &kp BACKSLASH    &trans  &trans
                         >;
