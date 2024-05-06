@@ -48,8 +48,8 @@
                 base_layer {
                         label = "Base";
                         bindings = <
-                        &kp Q &kp X &kp G &kp M &kp K           &kp SEMICOLON &kp COMMA  &kp APOSTROPHE     &kp J   &kp Z
-                        &mt LGUI N &mt LALT R &mt LSHIFT S &mt LCTRL T &kp W            &kp DOT &mt RCTRL A &mt RSHIFT E &mt RALT I &mt RGUI H
+                        &kp Q &kp X &kp G &kp M &kp K           &kp SEMICOLON &comma_question  &kp APOSTROPHE     &kp J   &kp Z
+                        &mt LGUI N &mt LALT R &mt LSHIFT S &mt LCTRL T &kp W            &dot_minus &mt RCTRL A &mt RSHIFT E &mt RALT I &mt RGUI H
                         &kp P &kp L &kp C &kp D &kp V           &kp TAB  &kp U  &kp O &kp Y &kp B
                                         &lt FUNCTION F &lt NUMBERS BSPC           &lt DIRECTION SPACE &lt SYMBOL ENTER
                         >;
