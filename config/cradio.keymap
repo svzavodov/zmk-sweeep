@@ -20,6 +20,27 @@
 };
 
 / {
+    behaviors {
+        comma_question: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dot_minus: dot_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
+/ {
     keymap {
                 compatible = "zmk,keymap";
 
@@ -39,9 +60,9 @@
                         label = "NUMBERS";
                         bindings = <
                         &trans &trans &trans &trans &trans          &kp LS(EQUAL) &kp N7 &kp N8 &kp N9 &kp LS(N8)
-                        &trans &trans &trans &trans &trans          &kp DOT     &kp N4 &kp N5 &kp N6 &kp N0
+                        &kp RGUI &trans &trans &trans &trans        &kp DOT     &kp N4 &kp N5 &kp N6 &kp N0
                         &trans &trans &trans &trans &trans          &kp EQUAL   &kp N1 &kp N2 &kp N3 &kp SLASH
-                                        &trans  &trans       &kp C_PLAY &kp CAPS
+                                        &trans  &trans              &kp C_PLAY &caps_word
                         >;
                 };
 
@@ -49,10 +70,10 @@
             sym_layer {
                         label = "Symbols";
                         bindings = <
-                        &bt BT_CLR &bt BT_NXT &trans &trans &trans                  &trans &trans &trans &trans &trans
-                        &kp RBKT &kp LBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(GRAVE)     &trans &trans &trans &trans &trans
-                        &kp GREATER_THAN  &kp LESS_THAN &kp LPAR &kp RPAR  &kp GRAVE       &trans &trans &trans &trans &trans
-                                                            &kp UNDERSCORE &kp BACKSLASH    &trans  &trans
+                        &bt BT_CLR &bt BT_NXT &trans &trans &trans                            &trans &trans &trans &trans &trans
+                        &kp LBKT &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(GRAVE)     &trans &trans &trans &trans &trans
+                        &kp LESS_THAN  &kp GREATER_THAN &kp LPAR &kp RPAR  &kp GRAVE          &trans &trans &trans &trans &trans
+                                                            &kp UNDERSCORE &kp BACKSLASH      &trans  &trans
                         >;
                 };
 
@@ -72,7 +93,7 @@
                         label = "DIRECTIONS";
                         bindings = <
                         &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans
-                        &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans        &trans &trans &trans &trans &trans
+                        &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans           &trans &trans &trans &trans &kp LGUI
                         &kp PAGE_UP &kp PAGE_DOWN &kp HOME &kp END &trans   &trans &trans &trans &trans &trans
                                         &kp ESC &kp DELETE                  &trans &trans
                         >;
