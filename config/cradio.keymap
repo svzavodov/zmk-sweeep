@@ -70,7 +70,7 @@
             sym_layer {
                         label = "Symbols";
                         bindings = <
-                        &bt BT_CLR &bt BT_NXT &trans &trans &trans                            &trans &trans &trans &trans &trans
+                        &bt BT_CLR &bt BT_NXT &kp C_RESET &trans &trans                            &trans &trans &trans &trans &trans
                         &kp LBKT &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(GRAVE)     &trans &trans &trans &trans &trans
                         &kp LESS_THAN  &kp GREATER_THAN &kp LPAR &kp RPAR  &kp GRAVE          &trans &trans &trans &trans &trans
                                                             &kp UNDERSCORE &kp BACKSLASH      &trans  &trans
