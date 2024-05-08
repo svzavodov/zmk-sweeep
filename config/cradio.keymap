@@ -48,10 +48,10 @@
                 base_layer {
                         label = "Base";
                         bindings = <
-                        &kp Q &kp X &kp G &kp M &kp K           &kp SEMICOLON &comma_question  &kp APOSTROPHE     &kp J   &kp Z
-                        &mt LGUI N &mt LALT R &mt LSHIFT S &mt LCTRL T &kp W            &dot_minus &mt RCTRL A &mt RSHIFT E &mt RALT I &mt RGUI H
-                        &kp P &kp L &kp C &kp D &kp V           &kp TAB  &kp U  &kp O &kp Y &kp B
-                                        &lt FUNCTION F &lt NUMBERS BSPC           &lt DIRECTION SPACE &lt SYMBOL ENTER
+                        &kp Q      &kp X      &kp G        &kp M       &kp K            &kp SEMI   &comma_question &kp APOS     &kp J      &kp Z
+                        &mt LGUI N &mt LALT R &mt LSHIFT S &mt LCTRL T &kp W            &dot_minus &mt RCTRL A     &mt RSHIFT E &mt RALT I &mt RGUI H
+                        &kp P      &kp L      &kp C        &kp D       &kp V            &kp TAB    &kp U           &kp O        &kp Y      &kp B
+                                        &lt FUNCTION F &lt NUMBERS BSPC                 &lt DIRECTION SPACE &lt SYMBOL ENTER
                         >;
                 };
 
@@ -59,9 +59,9 @@
                 NUMBERS_layer {
                         label = "NUMBERS";
                         bindings = <
-                        &trans &trans &trans &trans &trans          &kp LS(EQUAL) &kp N7 &kp N8 &kp N9 &kp LS(N8)
-                        &kp RGUI &trans &trans &trans &trans        &kp DOT     &kp N4 &kp N5 &kp N6 &kp N0
-                        &trans &trans &trans &trans &trans          &kp EQUAL   &kp N1 &kp N2 &kp N3 &kp SLASH
+                        &trans   &trans &trans &trans &trans        &kp LS(EQUAL) &kp N7 &kp N8 &kp N9 &kp LS(N8)
+                        &kp RGUI &trans &trans &trans &trans        &dot_minus    &kp N4 &kp N5 &kp N6 &kp N0
+                        &trans   &trans &trans &trans &trans        &kp EQUAL     &kp N1 &kp N2 &kp N3 &kp SLASH
                                         &trans  &trans              &kp C_PLAY &caps_word
                         >;
                 };
@@ -70,10 +70,10 @@
             sym_layer {
                         label = "Symbols";
                         bindings = <
-                        &bt BT_CLR &bt BT_NXT &kp C_RESET &trans &trans                            &trans &trans &trans &trans &trans
-                        &kp LBKT &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(GRAVE)     &trans &trans &trans &trans &trans
-                        &kp LESS_THAN  &kp GREATER_THAN &kp LPAR &kp RPAR  &kp GRAVE          &trans &trans &trans &trans &trans
-                                                            &kp UNDERSCORE &kp BACKSLASH      &trans  &trans
+                        &bt BT_CLR &bt BT_NXT &kp C_RESET &trans    &trans             &trans &trans &trans &trans &trans
+                        &kp LBKT   &kp RBKT   &kp LBRC    &kp RBRC  &kp LS(GRAVE)      &trans &trans &trans &trans &trans
+                        &kp LT     &kp GT     &kp LPAR    &kp RPAR  &kp GRAVE          &trans &trans &trans &trans &trans
+                                                          &kp UNDER &kp BACKSLASH      &trans &trans
                         >;
                 };
 
@@ -92,10 +92,10 @@
                 DIRECTION_layer {
                         label = "DIRECTIONS";
                         bindings = <
-                        &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans
-                        &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans           &trans &trans &trans &trans &kp LGUI
-                        &kp PAGE_UP &kp PAGE_DOWN &kp HOME &kp END &trans   &trans &trans &trans &trans &trans
-                                        &kp ESC &kp DELETE                  &trans &trans
+                        &trans    &trans    &trans   &trans    &kp INS          &trans &trans &trans &trans &trans
+                        &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp C_BRI_UP     &trans &trans &trans &trans &kp LGUI
+                        &kp PG_UP &kp PG_DN &kp HOME &kp END   &kp C_BRI_DN     &trans &trans &trans &trans &trans
+                                        &kp ESC &kp DELETE                      &trans &trans
                         >;
                 };
         };
